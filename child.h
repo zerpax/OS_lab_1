@@ -1,0 +1,1 @@
+void child(int*);
