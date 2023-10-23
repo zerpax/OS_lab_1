@@ -1,1 +1,1 @@
-void parent(int*);
+void parent(int*, char*);

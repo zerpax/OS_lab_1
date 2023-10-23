@@ -3,14 +3,12 @@
 #include "unistd.h"
 #include "sys/wait.h"
 
-void parent(int* pipe_fd){
+void parent(int* pipe_fd, char* file_name){
 	close(pipe_fd[0]); 
-	char file_name[256];	
-	
-	scanf("%s",file_name);
-
 	write(pipe_fd[1],  file_name,  sizeof(file_name));
-	char c = '_';
+
+	char c;
+	char* digs;
 	int num;
 	while(scanf("%d", &num)){
 			c = getchar();
